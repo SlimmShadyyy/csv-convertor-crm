@@ -60,7 +60,7 @@ export default function Home() {
 
       while (attempts < maxRetries && !success) {
         try {
-          const response = await fetch("https://csv-convertor-crm.onrender.com", {
+          const response = await fetch("https://csv-convertor-crm.onrender.com/api/process-csv", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ rows: batch }),
